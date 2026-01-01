@@ -5,7 +5,6 @@ const checkbox = document.getElementById("checkbox");
 const existingBtn = document.getElementById("existing");
 const form = document.getElementById("loginForm");
 
-// On page load, check for saved credentials
 window.addEventListener("load", () => {
   const savedUsername = localStorage.getItem("username");
   const savedPassword = localStorage.getItem("password");
@@ -15,7 +14,6 @@ window.addEventListener("load", () => {
   }
 });
 
-// Handle form submission
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -35,9 +33,9 @@ form.addEventListener("submit", function (e) {
   }
 });
 
-// Login as existing user
 existingBtn.addEventListener("click", () => {
   const savedUsername = localStorage.getItem("username");
   alert(`Logged in as ${savedUsername}`);
 });
+
 
